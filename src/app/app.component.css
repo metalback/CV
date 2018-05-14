@@ -1,0 +1,177 @@
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background: #fdfdfd;
+}
+
+.card {
+    position: inherit;
+}
+
+.centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
+.menu {
+    background: #424242;
+    height: 3em;
+    box-shadow: 0px 0px 3px 1px #1c1c1c;
+}
+
+.header {
+    background: #4e4e4e;
+    height: 9em;
+    text-align: center;
+}
+
+.header--title_container {
+    padding-top: 1em;
+}
+
+.container--logo {
+    text-align: center;
+}
+
+.title, .subtitle {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif ;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.subtitle {
+    font-size: 15px;
+}
+
+.logo   {
+    position: relative;
+    bottom: 3.5em;
+    border-radius: 50%;
+    border: 1px #fff;
+    width: 7em;
+    z-index: 1;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container--detalle {
+    position: relative;
+    bottom: 6em;
+    background: #fff;
+    padding-top: 7em;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.resumen--social {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 3em;
+    text-align: center;
+}
+
+.resumen--social > i {
+    color: #a1a1a1;
+    opacity: .5;
+    font-size: 25px;
+
+}
+
+.resumen--social > i:hover {
+    color: #424242;
+    cursor: pointer;
+}
+
+.resumen--boton {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.experiencia-laboral {
+    padding-top: 0;
+}
+
+/* Timeline */
+.experiencia-laboral--empresa {
+    border-radius: 50%;
+    width: 7em;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.timeline-container {
+    
+}
+
+.timeline-line {
+    border-right: 4px solid #ccc;
+}
+
+.timeline {
+    list-style: none;
+}
+
+.timeline > li {
+    width: 100%;
+    padding-top: 2em;
+}
+
+.timeline li i {
+    font-size: 30px;
+    color: #000;
+    background: #fff;
+    position: absolute;
+    top: 1em;
+    left: -2.33em;
+    border-radius: 50%;
+}
+
+.timeline li:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 1em solid #424242;
+    border-left: 1em solid transparent;
+    position: absolute;
+    left: -0.9em;
+    top: 2.04em;
+}
+
+.empresa-ico > img {
+    position: absolute;
+    border-radius: 50%;
+    width: 1.5em;
+    left: -0.33em;
+    top: 0.1em;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-title {
+    padding: 1em;
+    color: #FFF;
+}
+
+.card-title {
+    background: #424242;
+}
+
+.card-subtitle, .card-text, .card-link {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.card-text {
+
+}
