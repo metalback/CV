@@ -285,3 +285,42 @@
     padding: 30px 0;
     background-color: transparent;
 }
+
+/* SKILLS */
+
+.skill-encabezado {
+    padding-top: 4em;
+}
+
+.container--skill {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5em;
+}
+
+.card.skill {
+    padding: 2em;
+    background: #424242;
+}
+
+.container--skill-card {
+    padding-top: 2em;
+}
+
+.skill--title{
+    color: #fff;
+}
+
+.skill--progress {
+    color: #fff;
+    font-size: 15px;
+    padding-top: 0.5em;
+}
+
+.skill--progress > p > span { 
+    float: right;
+}
+
+.centered p {
+    justify-content: center;
+}
