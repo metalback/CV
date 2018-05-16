@@ -295,7 +295,8 @@
 .container--skill {
     display: flex;
     justify-content: space-around;
-    padding-top: 5em;
+    /*padding-top: 5em;*/
+    padding: 0 4em 0 4em;
 }
 
 .card.skill {
@@ -323,4 +324,18 @@
 
 .centered p {
     justify-content: center;
+}
+
+.education {
+    padding: 0 4em 0 4em;
+}
+
+.education img {
+    width: 3em;
+    border-radius: 50%;
+
+}
+
+.card-title span {
+    padding-left: 1em;
 }
