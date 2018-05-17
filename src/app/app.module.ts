@@ -6,17 +6,16 @@ import { AppComponent } from './app.component';
 
 // import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { AosToken, aos } from './aos';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { FoundationComponent } from './foundation/foundation.component';
+import { CollapseModule, ProgressbarModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FoundationComponent
+    AppComponent
   ],
   imports: [
     BrowserModule
     , CollapseModule.forRoot()
+    , ProgressbarModule.forRoot()
     
   ],
   providers: [{ provide: AosToken, useValue: aos }],
