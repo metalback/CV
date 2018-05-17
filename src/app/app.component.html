@@ -1,3 +1,33 @@
+<!-- HEADER -->
+<div id="header" class="shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" [ngClass]="{'nav-collapsed': isExpanded}">
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarSupportedContent2" 
+        aria-controls="navbarSupportedContent2" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+        (click)="isExpanded = !isExpanded"
+        [attr.aria-expanded]="!isExpanded"
+        >
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse hidden-lg-down" id="navbarSupportedContent" [collapse]="!isExpanded">
+        <ul class="navbar-nav mr-auto  mx-auto mt-2 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#experience">Experiencia Laboral</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#educacion">Educacion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#seminarios">Seminarios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>
+<!-- HEADER -->
+
 <div class="container">
   <div class="row">
     <div class="col-12 menu"></div>
@@ -15,7 +45,7 @@
 
     <div class="col-12 resumen">
       <div class="row">
-        <div class="col-12 centered container--detalle">
+        <div class="col-10 col-s-12 col-xs-12 centered container--detalle">
           <div class="row">
             <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2 resumen--social centered">
               <a href="https://github.com/metalback" target="_blank"><i class="fa fa-github"></i></a>
@@ -33,9 +63,13 @@
 
            <div class="col-12"></div>
 
-           <div class="col-12 centered resumen--boton">
-            <a href="#" class="btn btn-info" role="button">DESCARGAR CV</a>
-            <a href="#" class="btn btn-info" role="button">CONTACTAME</a>
+           <div class="centered resumen--boton">
+            <div class="col-12 col-s-12 col-xs-12 col-m-6 col-lg-6 col-xl-6">
+              <a href="#" class="btn btn-info" role="button">DESCARGAR CV</a>  
+            </div>
+            <div class="col-12 col-s-12 col-xs-12 col-m-6 col-lg-6 col-xl-6">
+              <a href="#" class="btn btn-info" role="button">CONTACTAME</a>
+            </div>
           </div>
         </div>
       </div>
@@ -311,14 +345,14 @@
     <h2>EDUCACION</h2>
   </div>
 
-  <div class="container">
+  <div class="container padding-2">
     <div class="row">
-      <div class="col-12 col-m-6 col-lg-8 col-xl-4 education">
+      <div class="col-12 education centered">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-                <img src="assets/unap.png">
-                <span>Ingeniero Civil En Computación e Informática</span>
+              <img src="assets/unap.png">
+              <span>Ingeniero Civil En Computación e Informática</span>
             </h5>
             <h6 class="card-subtitle mb-2 text-muted">Universidad Arturo Prat - Chile</h6>
             <h6 class="card-subtitle mb-2 text-muted">2006 - 2011</h6>
@@ -326,9 +360,43 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
-</div>
-<!-- End Education -->
+  <!-- End Education -->
+
+  <!-- CONTACT -->
+  <div class="col-12 centrar skill-encabezado">
+    <h2>CONTACTO</h2>
+  </div>
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-8 col-xs-12 col-s-12 centered form">
+        <form>
+          <div class="form-group">
+            <label for="contacto--nombre">Nombre</label>
+            <input type="email" class="form-control" id="contacto--nombre" placeholder="Ej: John Doe">
+          </div>
+          <div class="form-group">
+            <label for="contacto--email">Correo electrónico</label>
+            <input type="email" class="form-control" id="contacto--email" placeholder="Ej: joh@doe.cl">
+          </div>
+          <div class="form-group">
+            <label for="contacto--subject">Sujeto</label>
+            <input type="email" class="form-control" id="contacto--subject" placeholder="Ej: Contacto">
+          </div>
+          <div class="form-group">
+            <label for="contact--mensaje">Mensaje</label>
+            <textarea class="form-control" id="contact--mensaje" rows="3"></textarea>
+          </div>
+          <div class="centrar">
+            <button type="submit" class="btn btn-primary col-6"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> <span>Enviar</span></button>  
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- END CONTACT -->
 
 </div>
 </div>

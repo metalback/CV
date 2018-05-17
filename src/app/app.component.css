@@ -37,6 +37,38 @@
     margin-top: 9em;
 }
 
+.padding-2 {
+    padding-top: 2em;
+}
+
+.padding-3 {
+    padding-top: 3em;
+}
+
+.padding-4 {
+    padding-top: 4em;
+}
+
+.padding-5 {
+    padding-top: 5em;
+}
+
+.padding-6 {
+    padding-top: 6em;
+}
+
+.padding-7 {
+    padding-top: 7em;
+}
+
+.padding-8 {
+    padding-top: 8em;
+}
+
+.padding-9 {
+    padding-top: 9em;
+}
+
 
 .card {
     position: inherit;
@@ -96,6 +128,7 @@
     bottom: 6em;
     background: #fff;
     padding-top: 7em;
+    width: 25em;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -338,4 +371,27 @@
 
 .card-title span {
     padding-left: 1em;
+}
+
+.centered form {
+    padding: 2em 1em 2em 1em;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form {
+ padding-top: 2em;
+}
+
+.centrar {
+    text-align: center;
+}
+
+
+.ocultar {
+    display: none;
+}
+
+.bg-dark {
+    background-color: #424242 !important;
 }
