@@ -118,21 +118,20 @@ export class AppComponent {
 	}
 	];
 
-
-	contacto : IContacto = {
-		'nombre': ''
-		, 'correo': ''
-		, 'sujeto': ''
-		, 'mensaje': ''
-	};
-
 	contacto_nombre: string;
+	contacto_correo: string;
+	contacto_sujeto: string;
+	contacto_mensaje: string;
+
+	contacto_nombre_val: boolean = true;
+	contacto_correo_val: boolean = true;
+	contacto_sujeto_val: boolean = true;
+	contacto_mensaje_val: boolean = true;
 
 	constructor(
 		@Inject(AosToken) aos,
 		) {
 		aos.init();
-		this.contacto.nombre = '';
 	}
 
 	scroll(el) {
@@ -157,7 +156,13 @@ export class AppComponent {
 	}
 
 	enviarMensaje() {
-		console.log(this.contacto);
+
+	}
+
+	validar() {
+		if (this.contacto_nombre == 'trim') {
+			this.contacto_nombre_val = false;
+		}
 	}
 }
 
