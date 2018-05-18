@@ -19,12 +19,12 @@
       <li class="nav-item"><a class="nav-link" (click)="scroll(experience)">Experiencia Laboral</a></li>
       <li class="nav-item"><a class="nav-link" (click)="scroll(habilidades)">Habilidades</a></li>
       <li class="nav-item"><a class="nav-link" (click)="scroll(educacion)">Educacion</a></li>
-      <li class="nav-item"><a class="nav-link" (click)="scroll(seminarios)">Seminarios</a></li>
-      <li class="nav-item"><a class="nav-link" (click)="scroll(portafolio)">Portafolio</a></li>
-      <li class="nav-item"><a class="nav-link" (click)="scroll(contacto)">Contacto</a></li>
-    </ul>
-  </div>
-</nav>
+      <!-- <li class="nav-item"><a class="nav-link" (click)="scroll(seminarios)">Seminarios</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="scroll(portafolio)">Portafolio</a></li> -->
+        <li class="nav-item"><a class="nav-link" (click)="scroll(contacto)">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
 </div>
 
 
@@ -207,134 +207,44 @@
 </div>
 
 
-<div class="container">
+<div class="container" #habilidades>
   <div class="row container--skill">
-    <div class="col col-sm col-md-3 col-lg-3 col-xl-3 container--skill-card">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 container--skill-card">
       <div class="card skill">
-        <h5 class="text-center skill--title" #habilidades>Skill X</h5>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
+        <h5 class="text-center skill--title">General</h5>
+        <div *ngFor="let hab of desarrollo" class="skill--progress">
+          <p>{{hab.title}}</p>
+          <progressbar [max]="100" [value]="hab.current" [animate]="true" [type]="hab.type">
+            <span class="text-nowrap">{{hab.current}} / 100</span>
+          </progressbar>
         </div>
       </div>
     </div>
 
-    <div class="col col-sm col-md-3 col-lg-3 col-xl-3 container--skill-card">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 container--skill-card">
       <div class="card skill">
-        <h5 class="text-center skill--title">Skill X</h5>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <progressbar class="progress" [value]="stacked" [max]="100"></progressbar>
-          <!-- <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div> -->
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
+        <h5 class="text-center skill--title">Lenguajes</h5>
+        <div *ngFor="let hab of tecnico" class="skill--progress">
+          <p>{{hab.title}}</p>
+          <progressbar [max]="100" [value]="hab.current" [animate]="true" [type]="hab.type">
+            <span class="text-nowrap">{{hab.current}} / 100</span>
+          </progressbar>
         </div>
       </div>
     </div>
 
-    <div class="col col-sm col-md-3 col-lg-3 col-xl-3 container--skill-card">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 container--skill-card">
       <div class="card skill">
-        <h5 class="text-center skill--title">Skill X</h5>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        </div>
-        <div class="skill--progress">
-          <p>Title <span>90%</span></p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
+        <h5 class="text-center skill--title">Habilidades</h5>
+        <div *ngFor="let hab of blandas" class="skill--progress">
+          <p>{{hab.title}}</p>
+          <progressbar [max]="100" [value]="hab.current" [animate]="true" [type]="hab.type">
+            <span class="text-nowrap">{{hab.current}} / 100</span>
+          </progressbar>
         </div>
       </div>
     </div>
+
   </div>
 </div>  
 
@@ -348,8 +258,14 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">
-            <img src="assets/unap.png">
-            <span>Ingeniero Civil En Computación e Informática</span>
+            <div class="row">
+              <div class="col-md-2 col-lg-2 col-xl-2 centrar">
+                <img src="assets/unap.png">
+              </div>
+              <div class="col-md-8 col-lg-8 col-xl-8 padding-1 centrar">
+                Ingeniero Civil En Computación e Informática
+              </div>
+            </div>
           </h5>
           <h6 class="card-subtitle mb-2 text-muted">Universidad Arturo Prat - Chile</h6>
           <h6 class="card-subtitle mb-2 text-muted">2006 - 2011</h6>
@@ -368,31 +284,39 @@
 <div class="container" #contacto>
   <div class="row">
     <div class="col col-sm-12 col-md-10 col-lg-10 col-xl-10 centered form">
-      <form>
-        <div class="form-group">
-          <label for="contacto--nombre">Nombre</label>
-          <input type="email" class="form-control" id="contacto--nombre" placeholder="Ej: John Doe">
-        </div>
-        <div class="form-group">
-          <label for="contacto--email">Correo electrónico</label>
-          <input type="email" class="form-control" id="contacto--email" placeholder="Ej: joh@doe.cl">
-        </div>
-        <div class="form-group">
-          <label for="contacto--subject">Sujeto</label>
-          <input type="email" class="form-control" id="contacto--subject" placeholder="Ej: Contacto">
-        </div>
-        <div class="form-group">
-          <label for="contact--mensaje">Mensaje</label>
-          <textarea class="form-control" id="contact--mensaje" rows="3"></textarea>
-        </div>
-        <div class="centrar">
-          <button type="submit" class="btn btn-primary col-6"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> <span>Enviar</span></button>  
-        </div>
-      </form>
-    </div>
+      <div class="form-group">
+        <label for="contacto--nombre">Nombre</label>
+        <input 
+        type="text" 
+        class="form-control" 
+        id="contacto--nombre" 
+        placeholder="Ej: John Doe"
+        required
+        [(ngModel)]="contacto.nombre"
+        >
+      </div>
+      <div class="form-group">
+        <label for="contacto--email">Correo electrónico</label>
+        <input type="email" class="form-control" id="contacto--email" placeholder="Ej: joh@doe.cl">
+      </div>
+      <div class="form-group">
+        <label for="contacto--subject">Sujeto</label>
+        <input type="email" class="form-control" id="contacto--subject" placeholder="Ej: Contacto">
+      </div>
+      <div class="form-group">
+        <label for="contact--mensaje">Mensaje</label>
+        <textarea class="form-control" id="contact--mensaje" rows="3"></textarea>
+      </div>
+      <div class="centrar-elemento">
+        <re-captcha (resolved)="resolved($event)" siteKey="6LedEloUAAAAAISKz6LE-o6Y3jHQ3dJEsrjqRq-r"></re-captcha>  
+      </div>        
+      <div class="centrar padding-3">
+        <button [disabled]="!valida_robot" type="button" class="btn btn-primary col-6" (click)="enviarMensaje()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> <span>Enviar</span></button>  
+      </div>
   </div>
 </div>
+</div>
 
-<div class="back-to-top" (click)="scroll(inicio)">
+<div class="back-to-top" (click)="scroll(inicio)" *ngIf="mostrar_elemento">
   <a><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 </div>
