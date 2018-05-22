@@ -182,39 +182,44 @@
 }
 
 .timeline-center ul {
-    list-style: none;
+    list-style: none; 
+    text-align: center; 
+    padding: 0;  
 }
 
-.timeline-center ul li {
-    margin: 
+.timeline-center img {
+    border-radius: 50%;
+    width: 7em;
+    z-index: 2;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tiempo {
+    background: #fff;
 }
 
 .indap-ico img {
-    position: relative;
+    position: absolute;
     width: 5em;
     z-index: 2;
-    left: 22px;
+    left: 33%;
 }
 
-.tchile-ico img {
-    margin-top: 22em;
-    position: relative;
-    width: 5em;
-    z-index: 2;
-    left: 22px;
-    border-radius: 50%;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+.tchile {
+    margin-top: 15em;
 }
 
 .timeline-center:after {
     /*border: 2px solid #ccc;*/
     content:"";
     position: absolute;
+    text-align: center;
     top: 0;
     bottom: 0;
     left: 50%;
     border-left: 6px dotted #17a2b8;
     transform: translate(-50%);
+    z-index: -1;
 }
 
 .timeline-left li {
@@ -436,4 +441,22 @@
 .centrar-elemento {
     display: flex;
     justify-content: center;
+}
+
+a.link {
+    color: #fff;
+}
+
+a.link:hover {
+    color: #fff;
+}
+
+.imagen-mini {
+    width: 5em;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.no-arrow::before {
+    content: '';
 }

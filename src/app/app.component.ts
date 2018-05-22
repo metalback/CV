@@ -1,5 +1,7 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
+import { MailService } from './services/mail.service';
 import { AosToken } from './aos'; 
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
 	selector: 'app-root',
@@ -123,13 +125,10 @@ export class AppComponent {
 	contacto_sujeto: string;
 	contacto_mensaje: string;
 
-	contacto_nombre_val: boolean = true;
-	contacto_correo_val: boolean = true;
-	contacto_sujeto_val: boolean = true;
-	contacto_mensaje_val: boolean = true;
-
 	constructor(
-		@Inject(AosToken) aos,
+		@Inject(AosToken) aos
+		, private mail: MailService
+		, private toast: ToastrService
 		) {
 		aos.init();
 	}
@@ -157,12 +156,61 @@ export class AppComponent {
 
 	enviarMensaje() {
 
+		
+
+		var datos = {
+			'nombre':''
+			,'correo':''
+			,'mensaje':''
+			,'sujeto':''
+		};
+		
+		datos.nombre = this.contacto_nombre;
+		datos.correo = this.contacto_correo;
+		datos.mensaje = this.contacto_mensaje;
+		datos.sujeto = this.contacto_sujeto;
+
+		if(!this.validarDatos(datos)) {
+			this.toast.error('Favor ingresar todos los campos del formulario', 'Error al enviar!');
+			return;
+		}
+
+
+		this.mail.send(datos).subscribe(
+			(data: any) => {
+				if (data.success) {
+					this.toast.success('Gracias por contactarme, pronto te enviaré una respuesta', 'Email Enviado!');
+					this.contacto_nombre = '';
+					this.contacto_correo = '';
+					this.contacto_mensaje = '';
+					this.contacto_sujeto = '';
+					this.valida_robot = false;
+				} else {
+					this.toast.error('Ocurrió un error al intentar contactarme, por favor inténtelo mas tarde', 'Error al enviar!');
+				}
+			});
 	}
 
-	validar() {
-		if (this.contacto_nombre == 'trim') {
-			this.contacto_nombre_val = false;
+	validarDatos(datos: any) {
+console.log(datos)
+		let valido : boolean = true;
+		if (datos.nombre == '') {
+			valido = false;
 		}
+
+		if (datos.correo == '') {
+			valido = false;
+		}
+
+		if (datos.mensaje == '') {
+			valido = false;
+		}
+
+		if (datos.sujeto == '') {
+			valido = false;
+		}
+
+		return valido;
 	}
 }
 

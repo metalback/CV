@@ -23,7 +23,8 @@
         "styles.css",
         "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "../node_modules/aos/dist/aos.css"
+        "../node_modules/aos/dist/aos.css",
+        "../node_modules/ngx-toastr/toastr.css"
       ],
       "scripts": [
       ],
