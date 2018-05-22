@@ -193,15 +193,15 @@
     position: relative;
     width: 5em;
     z-index: 2;
-    left: 13px;
+    left: 22px;
 }
 
 .tchile-ico img {
-    margin-top: 40em;
+    margin-top: 22em;
     position: relative;
     width: 5em;
     z-index: 2;
-    left: 13px;
+    left: 22px;
     border-radius: 50%;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -230,6 +230,7 @@
     left: 12.4em;
     z-index: 1;
     border-radius: 50%;
+    height: 1em;
 }
 
 
@@ -242,6 +243,7 @@
     position: relative;
     left: 20.5em;
     top: 0.04em;
+    height: 1em;
 }
 
 .timeline-line {
