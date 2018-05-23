@@ -125,6 +125,8 @@ export class AppComponent {
 	contacto_sujeto: string;
 	contacto_mensaje: string;
 
+    isExpanded: boolean = false;
+
 	constructor(
 		@Inject(AosToken) aos
 		, private mail: MailService

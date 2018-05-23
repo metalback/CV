@@ -457,6 +457,16 @@ a.link:hover {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.no-arrow::before {
-    content: '';
+li.no-arrow::before {
+    border-top: 0em #fff !important;
+}
+
+.enviar-mensaje {
+    padding-bottom: 2em;
+}
+
+footer {
+    height: 20em;
+    background: #424242;
+    color: #fff;
 }
